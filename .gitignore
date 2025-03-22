@@ -1,0 +1,27 @@
+# Ignore .env file (contains sensitive information like API keys)
+.env
+
+# Ignore SQLite database file
+*.sqlite
+*.sqlite3
+
+# Ignore Go build artifacts
+/bin/
+/obj/
+
+# Ignore Go test output
+*.test
+*.out
+
+# Ignore vendor folder (if using Go modules, typically unnecessary to include)
+vendor/
+
+# Ignore IDE/editor files (optional, based on your environment)
+.vscode/
+.idea/
+
+# Ignore system files (macOS/Windows)
+.DS_Store
+Thumbs.db
+
+gopi
