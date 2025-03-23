@@ -12,8 +12,7 @@ func Check(e error) {
 
 func main() {
 	fmt.Println("starting")
+	// load the env map variables
 	envMap := LoadEnv()
-	fmt.Printf("appID = %s\n", envMap["APP_ID"])
-	fmt.Printf("token = %s\n", envMap["DISCORD_TOKEN"])
-	fmt.Printf("pub key = %s\n", envMap["PUBLIC_KEY"])
+
 }

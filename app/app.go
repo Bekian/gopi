@@ -1,8 +1,11 @@
+// App contains helpers and structs for discord objects
+// all structs were generated from the discord object definition tables using chatgpt and modified after
 package app
 
 // struct for ApplicationCommand,
 // adheres to https://discord.com/developers/docs/interactions/application-commands#application-command-object
 // and its respective structure
+// from the docs: "Given that all Discord IDs are snowflakes, you should always expect a string."
 type ApplicationCommand struct {
 	ID                       string                     `json:"id"`
 	Type                     *int                       `json:"type,omitempty"`
@@ -120,5 +123,5 @@ func (t ApplicationCommandOptionType) String() string {
 type ApplicationCommandOptionChoice struct {
 	Name              string            `json:"name"`                         // 1-100 character choice name
 	NameLocalizations map[string]string `json:"name_localizations,omitempty"` // Localization dictionary for name field
-	Value             interface{}       `json:"value"`                        // String, integer, or double value
+	Value             any               `json:"value"`                        // String, integer, or double value
 }
